@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import conversione.Convertitore;
+
 public class ConversioneTest {
 
 	Convertitore convertitore = new Convertitore();
