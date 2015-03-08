@@ -1,10 +1,11 @@
+package tdd.conversione;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import conversione.Convertitore;
 
-public class ConversioneTest {
+public class ConvertitoreTest {
 
 	Convertitore convertitore = new Convertitore();
 
