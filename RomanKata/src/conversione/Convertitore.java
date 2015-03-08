@@ -5,10 +5,10 @@ public class Convertitore {
 	public String converti(String numeroRomano) {
 
 		char[] cifreNumeroRomano = numeroRomano.toUpperCase().toCharArray();
-		return String.valueOf(calcolaNumeroRomano(cifreNumeroRomano));
+		return String.valueOf(convertiCifreNumeroRomano(cifreNumeroRomano));
 	}
 
-	private int calcolaNumeroRomano(char[] cifre) {
+	private int convertiCifreNumeroRomano(char[] cifre) {
 
 		int summa = 0;
 		int i = 0;
