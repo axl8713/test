@@ -4,7 +4,7 @@ public class Convertitore {
 
 	public String converti(String numeroRomano) {
 
-		char[] cifreNumeroRomano = numeroRomano.toCharArray();
+		char[] cifreNumeroRomano = numeroRomano.toUpperCase().toCharArray();
 		return String.valueOf(calcolaNumeroRomano(cifreNumeroRomano));
 	}
 
@@ -32,18 +32,21 @@ public class Convertitore {
 
 	private int convertiCifra(char cifra) {
 
-		if (cifra == 'M' || cifra == 'm') {
+		if (cifra == 'M') {
 			return 1000;
-		} else if (cifra == 'C' || cifra == 'c') {
+		} else if (cifra == 'C') {
 			return 100;
-		} else if (cifra == 'L' || cifra == 'l') {
+		} else if (cifra == 'L') {
 			return 50;
-		} else if (cifra == 'X' || cifra == 'x') {
+		} else if (cifra == 'X') {
 			return 10;
-		} else if (cifra == 'V' || cifra == 'v') {
+		} else if (cifra == 'V') {
 			return 5;
-		} else {
+		} else if (cifra == 'I') {
 			return 1;
+		} else {
+			throw new IllegalArgumentException("'" + cifra
+					+ "' non è un numero romano");
 		}
 	}
 }

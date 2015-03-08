@@ -1,4 +1,5 @@
 package tdd.conversione;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -92,4 +93,9 @@ public class ConvertitoreTest {
 		assertEquals("999", convertitore.converti("CmXcIx"));
 	}
 
+	/* test per errore */
+	@Test(expected = IllegalArgumentException.class)
+	public void testErrore() {
+		convertitore.converti("abc");
+	}
 }
